@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}About - Portfolio{% endblock %}
+
+{% block content %}
+<!-- About Hero -->
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; min-height: 40vh; display: flex; align-items: center;">
+    <div class="container">
+        <h1 class="display-4 mb-3 fade-in">About Me</h1>
+        <p class="lead fade-in" style="opacity: 0.9;">Passionate developer crafting digital solutions</p>
+    </div>
+</section>
+
+<!-- About Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div style="width: 100%; max-width: 400px; height: 400px; border-radius: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);">
+                    <i class="fas fa-user-tie" style="font-size: 150px; color: white;"></i>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4">Hello! I'm Your Name</h2>
+                <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">
+                    I'm a passionate Full Stack Developer with over 3 years of experience in building 
+                    web applications. I specialize in creating scalable, user-friendly solutions that 
+                    solve real-world problems.
+                </p>
+                <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">
+                    My journey in tech started with a curiosity about how websites work, and it has 
+                    evolved into a career where I get to build amazing digital experiences every day. 
+                    I'm constantly learning new technologies and best practices to stay at the 
+                    forefront of web development.
+                </p>
+                <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">
+                    When I'm not coding, you can find me contributing to open-source projects, 
+                    writing technical blog posts, or exploring new hiking trails.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<section class="py-5" style="background: #f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Professional Experience</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="custom-card bg-white p-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="mb-1">Senior Full Stack Developer</h5>
+                            <p class="text-primary mb-0">Tech Company Inc.</p>
+                        </div>
+                        <span class="badge bg-primary">2022 - Present</span>
+                    </div>
+                    <ul class="text-muted">
+                        <li>Led development of 5+ major web applications serving 100K+ users</li>
+                        <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card bg-white p-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="mb-1">Full Stack Developer</h5>
+                            <p class="text-primary mb-0">Startup Solutions</p>
+                        </div>
+                        <span class="badge bg-primary">2020 - 2022</span>
+                    </div>
+                    <ul class="text-muted">
+                        <li>Built RESTful APIs and microservices architecture</li>
+                        <li>Developed responsive front-end interfaces with React</li>
+                        <li>Optimized database queries improving performance by 40%</li>
+                    </ul>
+                </div>
+
+                <div class="custom-card bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="mb-1">Junior Developer</h5>
+                            <p class="text-primary mb-0">Digital Agency</p>
+                        </div>
+                        <span class="badge bg-primary">2019 - 2020</span>
+                    </div>
+                    <ul class="text-muted">
+                        <li>Collaborated on client projects using Flask and Django</li>
+                        <li>Implemented responsive designs and cross-browser compatibility</li>
+                        <li>Participated in agile development processes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Education</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="custom-card bg-white p-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 class="mb-1">Bachelor of Science in Computer Science</h5>
+                            <p class="text-primary mb-2">University Name</p>
+                            <p class="text-muted mb-0">Graduated with honors, GPA: 3.8/4.0</p>
+                        </div>
+                        <span class="badge bg-primary">2015 - 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Progress -->
+<section class="py-5" style="background: #f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Skills & Expertise</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Python / Flask / Django</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar" style="width: 90%; background: #3b82f6;"></div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>JavaScript / React / Node.js</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar" style="width: 85%; background: #8b5cf6;"></div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Database Design (SQL/NoSQL)</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar" style="width: 80%; background: #10b981;"></div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Cloud Services (AWS/GCP)</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar" style="width: 75%; background: #f59e0b;"></div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>DevOps / CI/CD</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar" style="width: 70%; background: #ef4444;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Certifications</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="custom-card bg-white p-4 text-center">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+                    <h5>AWS Certified Developer</h5>
+                    <p class="text-muted">Amazon Web Services</p>
+                    <span class="badge bg-primary">2023</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card bg-white p-4 text-center">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+                    <h5>Professional Scrum Master</h5>
+                    <p class="text-muted">Scrum.org</p>
+                    <span class="badge bg-primary">2022</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card bg-white p-4 text-center">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <h5>Full Stack Development</h5>
+                    <p class="text-muted">Udemy</p>
+                    <span class="badge bg-primary">2021</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

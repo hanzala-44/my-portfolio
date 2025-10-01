@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Portfolio{% endblock %}
+
+{% block content %}
+<!-- Projects Hero -->
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; min-height: 40vh; display: flex; align-items: center;">
+    <div class="container">
+        <h1 class="display-4 mb-3 fade-in">My Projects</h1>
+        <p class="lead fade-in" style="opacity: 0.9;">A showcase of my recent work and personal projects</p>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            {% for project in projects %}
+            <div class="col-lg-4 col-md-6">
+                <div class="custom-card bg-white h-100">
+                    <div style="height: 200px; background: linear-gradient(135deg, 
+                        {% if loop.index0|modulo(3) == 0 %}#667eea 0%, #764ba2 100%{% elif loop.index0|modulo(3) == 1 %}#f093fb 0%, #f5576c 100%{% else %}#4facfe 0%, #00f2fe 100%{% endif %}); 
+                        position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <i class="fas fa-laptop-code" style="font-size: 4rem; color: rgba(255,255,255,0.3);"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="mb-3">{{ project.title }}</h4>
+                        <p class="text-muted mb-3">{{ project.description }}</p>
+                        
+                        <div class="mb-3">
+                            <h6 class="mb-2">Technologies:</h6>
+                            {% for tech in project.technologies %}
+                            <span class="badge bg-primary me-1 mb-1">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <a href="{{ project.github }}" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="{{ project.demo }}" target="_blank" class="btn btn-primary btn-sm flex-grow-1">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Additional Projects Section -->
+<section class="py-5" style="background: #f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Other Notable Projects</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="custom-card bg-white p-4">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-folder" style="font-size: 2rem; color: #3b82f6;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-2">Weather API Application</h5>
+                            <p class="text-muted mb-3">Real-time weather data visualization using external APIs and interactive charts.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary me-1">Python</span>
+                                <span class="badge bg-secondary me-1">Flask</span>
+                                <span class="badge bg-secondary">Chart.js</span>
+                            </div>
+                            <a href="https://github.com/yourusername" class="text-primary"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="custom-card bg-white p-4">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-folder" style="font-size: 2rem; color: #8b5cf6;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-2">Blog Platform</h5>
+                            <p class="text-muted mb-3">Full-featured blogging platform with user authentication and rich text editor.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary me-1">Django</span>
+                                <span class="badge bg-secondary me-1">PostgreSQL</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/yourusername" class="text-primary"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="custom-card bg-white p-4">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-folder" style="font-size: 2rem; color: #10b981;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-2">Machine Learning Model Deployment</h5>
+                            <p class="text-muted mb-3">ML model serving API with Flask for real-time predictions and monitoring.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary me-1">Flask</span>
+                                <span class="badge bg-secondary me-1">TensorFlow</span>
+                                <span class="badge bg-secondary">Docker</span>
+                            </div>
+                            <a href="https://github.com/yourusername" class="text-primary"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="custom-card bg-white p-4">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <i class="fas fa-folder" style="font-size: 2rem; color: #f59e0b;"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-2">Real-time Chat Application</h5>
+                            <p class="text-muted mb-3">WebSocket-based chat app with room support and message persistence.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary me-1">Flask-SocketIO</span>
+                                <span class="badge bg-secondary me-1">Redis</span>
+                                <span class="badge bg-secondary">Vue.js</span>
+                            </div>
+                            <a href="https://github.com/yourusername" class="text-primary"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GitHub Stats -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">GitHub Activity</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <div class="custom-card bg-white p-4">
+                    <i class="fab fa-github" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+                    <h3 class="mb-0">50+</h3>
+                    <p class="text-muted mb-0">Repositories</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="custom-card bg-white p-4">
+                    <i class="fas fa-star" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                    <h3 class="mb-0">200+</h3>
+                    <p class="text-muted mb-0">Stars Earned</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="custom-card bg-white p-4">
+                    <i class="fas fa-code-branch" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <h3 class="mb-0">1000+</h3>
+                    <p class="text-muted mb-0">Contributions</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="custom-card bg-white p-4">
+                    <i class="fas fa-users" style="font-size: 3rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+                    <h3 class="mb-0">150+</h3>
+                    <p class="text-muted mb-0">Followers</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://github.com/yourusername" target="_blank" class="btn btn-primary-custom">
+                <i class="fab fa-github"></i> Visit My GitHub
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
